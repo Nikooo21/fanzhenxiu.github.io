@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python基础 - 第1章</title>
+    <title>Python基础 - 第2章</title>
     <style>
         * {
             margin: 0;
@@ -124,8 +124,8 @@
     <div class="sidebar">
         <div class="sidebar-title">Python基础 - 章节目录</div>
         <ul class="chapter-list">
-            <li class="chapter-item active">第1章 Python入门与环境</li>
-            <li class="chapter-item" onclick="location.href='python-ch2.html'">第2章 变量与数据类型</li>
+            <li class="chapter-item" onclick="location.href='python-ch1.html'">第1章 Python入门与环境</li>
+            <li class="chapter-item active">第2章 变量与数据类型</li>
             <li class="chapter-item" onclick="location.href='python-ch3.html'">第3章 运算符与表达式</li>
             <li class="chapter-item" onclick="location.href='python-ch4.html'">第4章 字符串操作</li>
             <li class="chapter-item" onclick="location.href='python-ch5.html'">第5章 条件判断语句</li>
@@ -143,13 +143,13 @@
         </div>
 
         <div class="content-card">
-            <h2>第1章 Python入门与环境搭建</h2>
-            <p>Python是一门解释型、面向对象的编程语言，语法简洁、上手简单，广泛应用于数据分析、人工智能、自动化办公等领域。本章学习Python环境安装、运行方式与基础输出语句。</p>
+            <h2>第2章 变量与常用数据类型</h2>
+            <p>变量是存储数据的容器，Python常用数据类型分为：字符串、整数、浮点数、布尔类型。本章学习变量定义、赋值与类型查看。</p>
             <div class="key-point">
                 <strong>学习要点：</strong>
-                <p>1. 了解Python语言特点与应用场景</p>
-                <p>2. 掌握Python环境安装与运行</p>
-                <p>3. 学会使用 print() 输出内容</p>
+                <p>1. 变量命名规则与赋值方式</p>
+                <p>2. 字符串、整数、浮点数、布尔类型使用</p>
+                <p>3. 使用 type() 查看数据类型</p>
             </div>
         </div>
 
@@ -158,26 +158,34 @@
             <div class="code-block">
                 <button class="copy-btn" onclick="copyCode(this)">复制代码</button>
 <pre>
-# 基础输出语句
-print("Hello Python!")
-print("樊珍秀 - 商务数据分析专业")
+# 定义变量
+name = "樊珍秀"
+age = 20
+height = 1.65
+is_student = True
 
-# 多行输出
-print("第一行内容")
-print("第二行内容")
+# 输出变量
+print(name)
+print(age)
+print(height)
+print(is_student)
+
+# 查看数据类型
+print(type(name))
+print(type(age))
 </pre>
             </div>
         </div>
 
         <div class="exercise">
             <h3>📝 课后练习</h3>
-            <p>1. 使用print函数输出自己的姓名、学校和专业。</p>
-            <p>2. 尝试连续输出三行不同的文本内容。</p>
+            <p>1. 定义变量存储姓名、年龄、身高并全部输出。</p>
+            <p>2. 使用type函数查看每个变量的数据类型。</p>
         </div>
 
         <div class="page-nav">
-            <span>上一章：无</span>
-            <a href="python-ch2.html">下一章 →</a>
+            <a href="python-ch1.html">← 上一章</a>
+            <a href="python-ch3.html">下一章 →</a>
         </div>
     </div>
 

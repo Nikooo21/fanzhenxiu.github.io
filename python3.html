@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python基础 - 第1章</title>
+    <title>Python基础 - 第3章</title>
     <style>
         * {
             margin: 0;
@@ -124,9 +124,9 @@
     <div class="sidebar">
         <div class="sidebar-title">Python基础 - 章节目录</div>
         <ul class="chapter-list">
-            <li class="chapter-item active">第1章 Python入门与环境</li>
+            <li class="chapter-item" onclick="location.href='python-ch1.html'">第1章 Python入门与环境</li>
             <li class="chapter-item" onclick="location.href='python-ch2.html'">第2章 变量与数据类型</li>
-            <li class="chapter-item" onclick="location.href='python-ch3.html'">第3章 运算符与表达式</li>
+            <li class="chapter-item active">第3章 运算符与表达式</li>
             <li class="chapter-item" onclick="location.href='python-ch4.html'">第4章 字符串操作</li>
             <li class="chapter-item" onclick="location.href='python-ch5.html'">第5章 条件判断语句</li>
             <li class="chapter-item" onclick="location.href='python-ch6.html'">第6章 循环语句</li>
@@ -143,13 +143,13 @@
         </div>
 
         <div class="content-card">
-            <h2>第1章 Python入门与环境搭建</h2>
-            <p>Python是一门解释型、面向对象的编程语言，语法简洁、上手简单，广泛应用于数据分析、人工智能、自动化办公等领域。本章学习Python环境安装、运行方式与基础输出语句。</p>
+            <h2>第3章 运算符与表达式</h2>
+            <p>Python支持算术运算符、比较运算符、逻辑运算符，用于数据计算和条件判断，是编写代码的基础。</p>
             <div class="key-point">
                 <strong>学习要点：</strong>
-                <p>1. 了解Python语言特点与应用场景</p>
-                <p>2. 掌握Python环境安装与运行</p>
-                <p>3. 学会使用 print() 输出内容</p>
+                <p>1. 加减乘除、取余、幂运算</p>
+                <p>2. 大于、小于、等于等比较运算</p>
+                <p>3. and/or/not 逻辑运算</p>
             </div>
         </div>
 
@@ -158,26 +158,31 @@
             <div class="code-block">
                 <button class="copy-btn" onclick="copyCode(this)">复制代码</button>
 <pre>
-# 基础输出语句
-print("Hello Python!")
-print("樊珍秀 - 商务数据分析专业")
+# 算术运算
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)
 
-# 多行输出
-print("第一行内容")
-print("第二行内容")
+# 比较运算
+print(a > b)
+print(a == b)
 </pre>
             </div>
         </div>
 
         <div class="exercise">
             <h3>📝 课后练习</h3>
-            <p>1. 使用print函数输出自己的姓名、学校和专业。</p>
-            <p>2. 尝试连续输出三行不同的文本内容。</p>
+            <p>1. 计算两个数字的和、差、积、商。</p>
+            <p>2. 判断两个数字大小并输出布尔结果。</p>
         </div>
 
         <div class="page-nav">
-            <span>上一章：无</span>
-            <a href="python-ch2.html">下一章 →</a>
+            <a href="python-ch2.html">← 上一章</a>
+            <a href="python-ch4.html">下一章 →</a>
         </div>
     </div>
 
