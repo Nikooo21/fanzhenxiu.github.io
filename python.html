@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python基础 | 樊珍秀</title>
+    <title>Python基础 - 第1章</title>
     <style>
         * {
             margin: 0;
@@ -12,126 +12,229 @@
             font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
         }
         body {
-            background: #f5f7fa;
+            background-color: #f5f7fa;
+            display: flex;
+            min-height: 100vh;
+        }
+        /* 左侧边栏（和主页保持一致） */
+        .sidebar {
+            width: 260px;
+            background: white;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+            padding: 20px 0;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e3a8a;
+            padding: 0 20px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .course-menu {
+            list-style: none;
+        }
+        .course-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .course-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
             color: #2d3748;
         }
-        .header {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .back {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 10px 20px;
-            background: #3b82f6;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-        }
-        .chapter {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .chapter h3 {
-            color: #1e3a8a;
-            margin-bottom: 10px;
-        }
-        code {
-            background: #f1f5f9;
-            padding: 10px;
+        .chapter-list {
+            list-style: none;
+            padding-left: 20px;
+            margin-top: 8px;
             display: block;
-            border-radius: 6px;
-            margin: 10px 0;
-            color: #e11d48;
         }
-        .exercise {
-            background: #e0f2fe;
-            padding: 12px;
+        .chapter-item {
+            padding: 8px 10px;
+            font-size: 14px;
+            color: #64748b;
+            cursor: pointer;
             border-radius: 6px;
-            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+        .chapter-item.active {
+            background: #e0eaff;
+            color: #1e3a8a;
+        }
+        /* 右侧主内容区 */
+        .main-content {
+            flex: 1;
+            padding: 20px 30px;
+        }
+        .page-header {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .back-btn {
+            padding: 8px 16px;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .complete-btn {
+            padding: 8px 16px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .key-points {
+            background: #e0f2fe;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .key-points h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+        .key-points ul {
+            list-style: none;
+        }
+        .key-points li {
+            padding: 4px 0;
+            color: #2d3748;
+            font-size: 14px;
+        }
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 14px;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #334155;
+            color: white;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .exercise-card {
+            background: #fef3c7;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-
-<div class="header">
-    <h1>Python基础 · 10个章节</h1>
-    <p>樊珍秀 | 商务数据分析与应用</p>
-</div>
-
-<div class="container">
-    <a href="index.html" class="back">← 返回主页</a>
-
-    <div class="chapter">
-        <h3>第1章：Python环境与输出</h3>
-        <code>print("Hello, 樊珍秀")</code>
-        <div class="exercise">练习：输出你的名字和专业</div>
+    <!-- 左侧边栏 -->
+    <div class="sidebar">
+        <div class="sidebar-title">
+            <span style="color:#3b82f6;">📚</span>
+            课程章节目录
+        </div>
+        <ul class="course-menu">
+            <li class="course-item">
+                <div class="course-header">
+                    <span>🐍 Python编程基础</span>
+                    <span style="font-size:12px;color:#94a3b8;">0/10 ▼</span>
+                </div>
+                <ul class="chapter-list">
+                    <li class="chapter-item active">第1章 Python入门与环境</li>
+                    <li class="chapter-item">第2章 变量与数据类型</li>
+                    <li class="chapter-item">第3章 条件与循环</li>
+                    <li class="chapter-item">第4章 列表与字典</li>
+                    <li class="chapter-item">第5章 函数定义与调用</li>
+                    <li class="chapter-item">第6章 文件与异常处理</li>
+                    <li class="chapter-item">第7章 面向对象入门</li>
+                    <li class="chapter-item">第8章 模块与包管理</li>
+                    <li class="chapter-item">第9章 常用库使用</li>
+                    <li class="chapter-item">第10章 综合项目实战</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
-    <div class="chapter">
-        <h3>第2章：变量与数据类型</h3>
-        <code>name = "樊珍秀"<br>age = 20<br>print(name, age)</code>
-        <div class="exercise">练习：定义变量存储班级、学号</div>
+    <!-- 右侧学习内容区 -->
+    <div class="main-content">
+        <div class="page-header">
+            <button class="back-btn" onclick="location.href='index.html'">← 返回章节列表</button>
+            <button class="complete-btn">标记为已学完</button>
+        </div>
+
+        <div class="content-card">
+            <p>Python 是一门简单易学、功能强大的编程语言，拥有高效的高级数据结构和简单有效的面向对象编程方法。Python 的语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的理想语言。</p>
+        </div>
+
+        <div class="key-points">
+            <h3>Python 核心要点</h3>
+            <ul>
+                <li>• 解释型语言：无需编译，直接运行代码</li>
+                <li>• 动态类型：无需声明变量类型，运行时自动判断</li>
+                <li>• 缩进语法：使用缩进表示代码块，强制代码规范</li>
+                <li>• 丰富的库：NumPy、Pandas、Matplotlib 等数据分析库</li>
+                <li>• 跨平台：可在 Windows、Mac、Linux 上运行</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h3 style="color:#1e3a8a;margin-bottom:15px;">示例代码</h3>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">复制代码</button>
+                <pre>
+# 第一个Python程序
+print("Hello, 樊珍秀!")
+
+# 变量定义
+name = "樊珍秀"
+major = "商务数据分析与应用"
+print(f"我是{name}，专业是{major}")
+
+# 简单计算
+a = 10
+b = 20
+print(f"a + b = {a + b}")
+                </pre>
+            </div>
+        </div>
+
+        <div class="exercise-card">
+            <h3 style="color:#92400e;margin-bottom:10px;">📝 章节练习</h3>
+            <p>1. 编写代码，输出你的姓名、学校和专业。</p>
+            <p>2. 定义两个变量存储你的身高和体重，计算并输出BMI值。</p>
+            <p>3. 尝试使用print函数输出多行文本。</p>
+        </div>
     </div>
 
-    <div class="chapter">
-        <h3>第3章：数字与运算</h3>
-        <code>a = 10<br>b = 3<br>print(a + b)<br>print(a * b)</code>
-        <div class="exercise">练习：计算长方形面积</div>
-    </div>
-
-    <div class="chapter">
-        <h3>第4章：字符串操作</h3>
-        <code>s = "商务数据分析"<br>print(s[0:2])<br>print(len(s))</code>
-        <div class="exercise">练习：截取并输出字符串内容</div>
-    </div>
-
-    <div class="chapter">
-        <h3>第5章：条件判断 if</h3>
-        <code>score = 90<br>if score >= 60:<br>    print("及格")</code>
-        <div class="exercise">练习：判断成绩是否优秀</div>
-    </div>
-
-    <div class="chapter">
-        <h3>第6章：循环 for</h3>
-        <code>for i in range(5):<br>    print(i)</code>
-        <div class="exercise">练习：循环输出1-10</div>
-    </div>
-
-    <div class="chapter">
-        <h3>第7章：循环 while</h3>
-        <code>i = 0<br>while i < 5:<br>    print(i)<br>    i += 1</code>
-        <div class="exercise">练习：while循环求和</div>
-    </div>
-
-    <div class="chapter">
-        <h3>第8章：列表 list</h3>
-        <code>courses = ["Python", "数据分析", "数据库"]<br>print(courses[0])</code>
-        <div class="exercise">练习：创建课程列表并遍历</div>
-    </div>
-
-    <div class="chapter">
-        <h3>第9章：函数定义</h3>
-        <code>def say_hello():<br>    print("欢迎学习Python")<br>say_hello()</code>
-        <div class="exercise">练习：写一个计算两数之和的函数</div>
-    </div>
-
-    <div class="chapter">
-        <h3>第10章：综合小项目</h3>
-        <code>name = input("请输入姓名：")<br>print("你好，", name)</code>
-        <div class="exercise">练习：制作简单个人信息录入程序</div>
-    </div>
-</div>
-
+    <script>
+        function copyCode(btn) {
+            const code = btn.nextElementSibling.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.textContent = "已复制!";
+                setTimeout(() => btn.textContent = "复制代码", 1500);
+            });
+        }
+    </script>
 </body>
 </html>
