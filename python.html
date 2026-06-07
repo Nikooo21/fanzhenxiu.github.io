@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python基础 | 樊珍秀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        body {
+            background: #f5f7fa;
+            color: #2d3748;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .chapter {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .chapter h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        code {
+            background: #f1f5f9;
+            padding: 10px;
+            display: block;
+            border-radius: 6px;
+            margin: 10px 0;
+            color: #e11d48;
+        }
+        .exercise {
+            background: #e0f2fe;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Python基础 · 10个章节</h1>
+    <p>樊珍秀 | 商务数据分析与应用</p>
+</div>
+
+<div class="container">
+    <a href="index.html" class="back">← 返回主页</a>
+
+    <div class="chapter">
+        <h3>第1章：Python环境与输出</h3>
+        <code>print("Hello, 樊珍秀")</code>
+        <div class="exercise">练习：输出你的名字和专业</div>
+    </div>
+
+    <div class="chapter">
+        <h3>第2章：变量与数据类型</h3>
+        <code>name = "樊珍秀"<br>age = 20<br>print(name, age)</code>
+        <div class="exercise">练习：定义变量存储班级、学号</div>
+    </div>
+
+    <div class="chapter">
+        <h3>第3章：数字与运算</h3>
+        <code>a = 10<br>b = 3<br>print(a + b)<br>print(a * b)</code>
+        <div class="exercise">练习：计算长方形面积</div>
+    </div>
+
+    <div class="chapter">
+        <h3>第4章：字符串操作</h3>
+        <code>s = "商务数据分析"<br>print(s[0:2])<br>print(len(s))</code>
+        <div class="exercise">练习：截取并输出字符串内容</div>
+    </div>
+
+    <div class="chapter">
+        <h3>第5章：条件判断 if</h3>
+        <code>score = 90<br>if score >= 60:<br>    print("及格")</code>
+        <div class="exercise">练习：判断成绩是否优秀</div>
+    </div>
+
+    <div class="chapter">
+        <h3>第6章：循环 for</h3>
+        <code>for i in range(5):<br>    print(i)</code>
+        <div class="exercise">练习：循环输出1-10</div>
+    </div>
+
+    <div class="chapter">
+        <h3>第7章：循环 while</h3>
+        <code>i = 0<br>while i < 5:<br>    print(i)<br>    i += 1</code>
+        <div class="exercise">练习：while循环求和</div>
+    </div>
+
+    <div class="chapter">
+        <h3>第8章：列表 list</h3>
+        <code>courses = ["Python", "数据分析", "数据库"]<br>print(courses[0])</code>
+        <div class="exercise">练习：创建课程列表并遍历</div>
+    </div>
+
+    <div class="chapter">
+        <h3>第9章：函数定义</h3>
+        <code>def say_hello():<br>    print("欢迎学习Python")<br>say_hello()</code>
+        <div class="exercise">练习：写一个计算两数之和的函数</div>
+    </div>
+
+    <div class="chapter">
+        <h3>第10章：综合小项目</h3>
+        <code>name = input("请输入姓名：")<br>print("你好，", name)</code>
+        <div class="exercise">练习：制作简单个人信息录入程序</div>
+    </div>
+</div>
+
+</body>
+</html>
